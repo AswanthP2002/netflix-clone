@@ -24,7 +24,7 @@ body, html{
 .overlay{
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background: linear-gradient(black, rgba(5, 5, 5, 0), black);
 }
 .container{
     padding: 30px 180px;
@@ -225,7 +225,6 @@ table a,p{
 }
 .telecast{
     position: absolute;
-    border: 1px solid white;
     margin-top: 89px;
     margin-left: 76px;
     height: 230px;
