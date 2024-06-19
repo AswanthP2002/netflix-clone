@@ -1,11 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@font-face{
+    font-family: "Netflix-Sans-Bold";
+    src: url(Fonts/NetflixSans-Bold.otf);
+}
+@font-face{
+    font-family: "Netflix-Sans-Regular";
+    src: url(Fonts/NetflixSans-Regular.otf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     background-color: rgb(43, 44, 43);
 }
@@ -17,8 +24,8 @@ body, html{
     scroll-behavior: smooth;
 }
 #home-1{
-    background-image: url(Images/home-background.jpg);
-    
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8)0, rgba(0, 0, 0, 0)60%, rgba(0, 0, 0, 0.8)100%),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_large.jpg");
     background-position-y: 70%;
     background-position-x: 50%;
     height: 96vh;
@@ -27,7 +34,7 @@ body, html{
 .overlay{
     height: 100%;
     width: 100%;
-    background: linear-gradient(black, rgba(5, 5, 5, 0), black);
+    background: rgb(0 0 0 / 40%);
 }
 .container{
     padding: 30px 180px;
@@ -39,7 +46,6 @@ body, html{
     width: 100%;
 }
 .top{
-
     display: flex;
 }
 
@@ -89,8 +95,8 @@ body, html{
 #signin{
     width: 76px;
     color: white;
-    background-color: rgb(230, 11, 11);
-    font-family: "Sarabun",sans-serif;
+    background-color: rgb(229, 9, 20);
+    font-family: "Netflix-Sans-Regular",sans-serif;
     font-size: .9rem;
     font-weight: 600;
     font-style: normal;
@@ -109,13 +115,13 @@ body, html{
 }
 .content h1,p{
     color: white;
-    line-height: 37px;
 }
-.home-head{
-    font-size: 3rem;
-}
-.p1, .p2{
+.p1 {
     font-size: 1.500rem;
+    margin-top: 1.2rem;
+}
+.p2{
+    font-size: 1.250rem;
     margin-top: 1.2rem;
 }
 .registration input{
@@ -125,7 +131,7 @@ body, html{
     border: 1px solid grey;
     padding-left: 15px;
     border-radius: 6px;
-    font-family: "Sarabun",sans-serif;
+    font-family: "Netflix-Sans-Regular",sans-serif;
     font-style: normal;
     font-size: 1rem;
 }
@@ -135,15 +141,22 @@ body, html{
 .registration button{
     height: 56px;
     width: 203px;
-    background-color: red;
+    background-color: rgb(229, 9, 20);
     color: white;
     border: none;
-    font-family: "Sarabun",sans-serif;
-    border-radius: 6px;
+    font-family: "Netflix-Sans-Regular",sans-serif;
+    border-radius: 3px;
     font-size: 1.525rem;
     font-style: normal;
     font-weight: 600;
-    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    
+}
+.registration button span{
+    font-weight: 100;
 }
 .registration{
     margin-top: .750rem;
@@ -196,8 +209,7 @@ body, html{
     display: flex;
     font-size: 1.7rem;
     align-items: center;
-    padding: 0px 20px;
-    
+    padding: 0px 20px; 
 }
 .q{
     flex-grow: 1;
@@ -212,36 +224,34 @@ body, html{
 .home-head, .home-2-head, .home-3-head, .home-4-head, .home-5-head{
     color: white;
     font-size: 3rem;
-    font-family: "Archivo Black",sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    
+    font-family: "Netflix-Sans-Bold",sans-serif;
+    font-weight: 1000;
+    font-style: normal;  
 }
 .faq{
-    font-family: "Archivo Black",sans-serif;
+    font-family: "Netflix-Sans-Bold",sans-serif;
 }
 .p1, .p2{
-    font-family: "Sarabun",sans-serif;
+    font-family: "Netflix-Sans-Regular",sans-serif;
 }
 .q p{
-    font-family: "Sarabun",sans-serif;
+    font-family: "Netflix-Sans-Regular",sans-serif;
     font-size: 1.5rem;
 }
 table a,p{
-    font-family: "Sarabun",sans-serif;
+    font-family: "Netflix-Sans-Regular",sans-serif;
     color: rgb(100, 99, 99);
 }
 .home-2-p, .home-3-p, .home-4-p, .home-5-p{
     font-size: 1.5rem;
     margin-top: 1rem;
-    font-family: "Sarabun",sans-serif;
+    font-family: "Netflix-Sans-Regular",sans-serif;
 }
 
 .column-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 .telecast{
     position: absolute;
@@ -315,8 +325,8 @@ table a,p{
     font-weight: bold;
 }
 .dow{
-    margin-top: -15px;
     color: rgb(23, 119, 244);
+    font-size: 14px;
     
 }
 .text{
@@ -356,16 +366,17 @@ footer .row .col .list li{
     margin-top: 20px;
 }
 footer .row .col .list a{
-    font-family: "Sarabun", sans-serif;
-    font-weight: 300;
+    font-family: "Netflix-Sans-Regular", sans-serif;
+    font-weight: lighter;
     color: #FFFFFFB3;
+    font-size: 14px;
 }
 footer #number p{
     color: #FFFFFFB3;
 }
 footer #number a{
     color: #FFFFFFB3;
-    font-family: "Sarabun", sans-serif;
+    font-family: "Netflix-Sans-Regular", sans-serif;
 }
 .footer-btn{
     height: 40px;
@@ -527,8 +538,7 @@ footer .test svg{
         height: 50px;
     }
     .dow{
-        font-size: 12px;
-        margin-top: -20px;
+        font-size: 10px;
     }
     .text{
         text-align: start;
@@ -602,5 +612,5 @@ footer .test svg{
     }
 }
 
-/*Final testing*/
+
 
