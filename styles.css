@@ -9,6 +9,9 @@
 body{
     background-color: rgb(43, 44, 43);
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 body, html{
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -39,9 +42,13 @@ body, html{
 
     display: flex;
 }
-.left img{
-    height: 50px;
-    width: 150px;
+
+.left svg{
+    width: 9.25rem;
+    height: 2.5rem;
+    color: rgb(229, 9, 20);
+    fill: currentColor;
+    display: block;
 }
 .right{
     position: relative;
@@ -55,16 +62,29 @@ body, html{
 .nav-btns{
     height: 32px;
 }
-#language{
-    width: 122px;
-    font-family:"Sarabun",sans-serif ;
-    font-size: .9rem;
-    font-weight: 600;
-    font-style: normal;
-    border-radius: 5px;
-    border: 1px solid rgb(84, 82, 82);
-    background: rgba(0,0,0,0.8);
+.right .test svg{
+    position: absolute;
     color: white;
+    top: 7px;
+    left: 15px;
+}
+.right .test{
+    border: 1px solid white;
+    width: fit-content;
+    position: relative;
+    position: relative;
+    border: none;
+}
+#language-black{
+    width: 126px;
+    height: 32px;
+    font-weight: 600;
+    padding-right: 10px;
+    text-align: end;
+    border: 1px solid rgb(93, 93, 93);
+    color: white;
+    background-color: black;
+    border-radius: 5px;
 }
 #signin{
     width: 76px;
@@ -352,7 +372,20 @@ footer #number a{
     padding-left: 30px;
     padding-right: 20px;
 }
+footer .test{
+    border: 1px solid white;
+    width: fit-content;
+    position: relative;
+    position: relative;
+    border: none;
+}
 
+footer .test svg{
+    position: absolute;
+    color: white;
+    top: 7px;
+    left: 15px;
+}
 
 @media screen and (max-width:1020px) {
 
@@ -373,8 +406,9 @@ footer #number a{
     .right{
         gap: 8px;
     }
-    .right #language{
-        width: 70px;
+    .right #language-black{
+        width: 100px;
+        padding-right: 0;
     }
     .home-head{
         font-size: 1.7rem;
@@ -568,4 +602,5 @@ footer #number a{
     }
 }
 
+/*Final testing*/
 
